@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Image Change Detection</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Upload Two Images for Change Detection</h1>
+      <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="image1">Image 1:</label>
+          <input type="file" id="image1" name="image1" required />
+        </div>
+        <div class="form-group">
+          <label for="image2">Image 2:</label>
+          <input type="file" id="image2" name="image2" required />
+        </div>
+        <button type="submit">Upload Images</button>
+      </form>
+
+      <!-- Display uploaded images only if both are uploaded -->
+      {% if image1 and image2 %}
+      <h2>Uploaded Images</h2>
+      <img
+        src="{{ url_for('static', filename='output/' + image1) }}"
+        alt="Uploaded Image 1"
+        style="max-width: 300px"
+      />
+      <img
+        src="{{ url_for('static', filename='output/' + image2) }}"
+        alt="Uploaded Image 2"
+        style="max-width: 300px"
+      />
+      {% endif %}
+
+      <!-- Display change map and save button only if change map is generated -->
+      {% if filename %}
+      <h2>Change Map</h2>
+      <img
+        src="{{ url_for('static', filename='output/' + filename) }}"
+        alt="Change Map"
+        style="max-width: 600px"
+      />
+      <br />
+      <a href="{{ url_for('static', filename='output/' + filename) }}" download>
+        <button>Save Change Map</button>
+      </a>
+      {% endif %}
+    </div>
+  </body>
+</html>
