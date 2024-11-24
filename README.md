@@ -13,43 +13,33 @@
 - **Agricultural Monitoring:** Monitor changes in agricultural land use and crop patterns.
 - **National Security:** Support in identifying potential security threats by detecting unauthorized activities.
 
-
-## Installation
-
-1. **Clone the repository:**
-  - **Backend:**
-    ```bash
-    git clone https://github.com/Harshbailurkar/Change-detection-due-to-human-activities.git
-    ```
-  - **Frontend:**
-```bash
-  git clone https://github.com/Harshbailurkar/Change-Detection-frontend.git
-```
-3. **Install dependencies:**
-    - **Backend:**
-      ```bash
-      cd backend
-      pip install requirements.txt
-      ```
-    - **Frontend:**
-      ```bash
-      cd frontend
-      npm install
-      ```
-
-4. **Set up environment variables:**
+**Set up environment variables:**
     - Create a `.env` file in the root directory of both backend and frontend.
     - Add necessary API keys, database credentials, and other configurations.
 
-5. **Start the application:**
+**Start the application:**
     - **Backend:**
       ```bash
       cd backend
+
+      python -m venv venv
+
+      venv\Scripts\activate
+
+      source venv/bin/activate
+
+      pip install virtualenv
+
+      virtualenv venv
+
+      pip install -r requirements.txt
+
       flask --app app run
       ```
     - **Frontend:**
       ```bash
       cd frontend
+      npm install
       npm run dev
       ```
 
@@ -87,8 +77,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- **Name:** Harsh Ramesh Bailurkar
-- **Email:** harshbailurkar@gmail.com
-- **LinkedIn:** [Harsh Bailurkar](https://www.linkedin.com/in/harsh-bailurkar)
-- **GitHub:** [Harsh Bailurkar](https://github.com/Harshbailurkar)
+- **Name:** Avishkar Mahalingpure
+- **Email:** avimahalingpure10@gmail.com
+- **GitHub:** [Avishkar Mahalingpure](https://github.com/Spikree)
 
